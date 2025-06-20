@@ -39,7 +39,7 @@ export function Footer() {
           <div className="col-span-1 lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <SuperteamSLLogo className="h-10 w-10" />
-              <span className="font-headline text-2xl font-bold">LeoneVerse</span>
+              <span className="font-headline text-2xl font-bold">Superteam SL</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-md">
               Superteam Sierra Leone: Igniting Web3 innovation from the heart of West Africa. Join us in building a decentralized future.

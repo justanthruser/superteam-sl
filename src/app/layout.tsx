@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'LeoneVerse - Superteam SL',
-  description: 'Superteam Sierra Leone: Built by the bold. Powered by Web3. Born in Sierra Leone.',
+  title: 'Superteam Sierra Leone',
+  description: 'Superteam SL: Built by the bold. Powered by Web3. Born in Sierra Leone.',
 };
 
 export default function RootLayout({

@@ -4,91 +4,91 @@
 
 @layer base {
   :root {
-    --background: 0 0% 10%; /* Dark Charcoal */
-    --foreground: 0 0% 94.1%; /* Light Gray for text */
+    --background: 0 0% 100%; /* White */
+    --foreground: 220 10% 10%; /* Dark Blue-Gray for text */
 
-    --card: 0 0% 14.1%; /* Slightly Lighter Dark Charcoal */
-    --card-foreground: 0 0% 94.1%;
+    --card: 0 0% 98%; /* Off-White */
+    --card-foreground: 220 10% 10%;
 
-    --popover: 0 0% 14.1%;
-    --popover-foreground: 0 0% 94.1%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 220 10% 10%;
 
-    --primary: 30 100% 60%; /* Vibrant Orange */
-    --primary-foreground: 0 0% 10%; /* Dark Charcoal for text on orange */
+    --primary: 160 84% 39%; /* Vibrant Green */
+    --primary-foreground: 0 0% 100%; /* White text on green */
 
-    --secondary: 0 0% 20%; /* Dark Gray for secondary actions */
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 210 40% 96%; /* Light Blue-Gray */
+    --secondary-foreground: 220 10% 10%;
 
-    --muted: 0 0% 20%; /* Dark Gray for subtle backgrounds */
-    --muted-foreground: 0 0% 62.7%; /* Lighter Gray for muted text */
+    --muted: 210 20% 98%; /* Very Light Blue-Gray */
+    --muted-foreground: 220 8% 46%; /* Medium Gray for muted text */
 
-    --accent: 183 100% 74%; /* Electric Blue */
-    --accent-foreground: 195 38% 8%; /* Dark Blue/Charcoal for text on blue */
+    --accent: 210 100% 50%; /* Bright Blue */
+    --accent-foreground: 0 0% 100%; /* White text on blue */
 
-    --destructive: 0 100% 66.1%; /* Vivid Red */
+    --destructive: 0 84% 60%; /* Red */
     --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 0 0% 23.9%; /* Medium Dark Gray */
-    --input: 0 0% 23.9%;
-    --ring: 183 100% 74%; /* Electric Blue for focus rings */
+    --border: 220 20% 90%; /* Light Gray */
+    --input: 220 20% 90%;
+    --ring: 210 100% 50%; /* Blue for focus rings */
 
     --radius: 0.5rem;
 
-    /* Chart colors (can be adjusted to fit the theme) */
-    --chart-1: 30 100% 60%; /* Orange */
-    --chart-2: 183 100% 74%; /* Blue */
-    --chart-3: 45 100% 60%; /* Yellow/Gold */
-    --chart-4: 210 100% 60%; /* Bright Blue */
-    --chart-5: 0 0% 80%; /* Light Gray */
+    /* Chart colors */
+    --chart-1: 160 84% 39%; /* Green */
+    --chart-2: 210 100% 50%; /* Blue */
+    --chart-3: 160 84% 39%; /* Green (darker shade) */
+    --chart-4: 190 90% 50%; /* Light Blue */
+    --chart-5: 0 0% 90%; /* Very Light Gray */
     
-    /* Sidebar specific colors - adjust if sidebar is used extensively with different theme */
-    --sidebar-background: 0 0% 8%; /* Even darker charcoal */
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 30 100% 60%;
-    --sidebar-primary-foreground: 0 0% 10%;
-    --sidebar-accent: 183 100% 74%;
-    --sidebar-accent-foreground: 195 38% 8%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 183 100% 74%;
+    /* Sidebar specific colors */
+    --sidebar-background: 220 14% 96%; /* Light Blue-Gray */
+    --sidebar-foreground: 220 10% 10%;
+    --sidebar-primary: 160 84% 39%; /* Green */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 100% 50%; /* Blue */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: 210 100% 50%;
   }
 
   /* Remove .dark class specific overrides if dark is the only theme */
   /* Or ensure .dark is applied to html tag and keep these for explicitness */
   .dark {
-    --background: 0 0% 10%;
-    --foreground: 0 0% 94.1%;
-    --card: 0 0% 14.1%;
-    --card-foreground: 0 0% 94.1%;
-    --popover: 0 0% 14.1%;
-    --popover-foreground: 0 0% 94.1%;
-    --primary: 30 100% 60%;
-    --primary-foreground: 0 0% 10%;
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 0 0% 85%;
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 62.7%;
-    --accent: 183 100% 74%;
-    --accent-foreground: 195 38% 8%;
-    --destructive: 0 100% 66.1%;
+    --background: 220 14% 12%; /* Dark Blue-Gray */
+    --foreground: 0 0% 95%; /* Off-White */
+    --card: 220 14% 16%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 95%;
+    --popover: 220 14% 16%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 160 74% 45%; /* Slightly muted green for dark mode */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 27%; /* Darker blue-gray */
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 12% 20%; /* Dark muted background */
+    --muted-foreground: 220 8% 65%; /* Lighter muted text */
+    --accent: 210 100% 56%; /* Bright blue */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 23.9%;
-    --input: 0 0% 23.9%;
-    --ring: 183 100% 74%;
+    --border: 220 12% 25%; /* Slightly lighter border */
+    --input: 220 12% 25%;
+    --ring: 210 100% 56%; /* Blue for focus rings */
     
-    --chart-1: 30 100% 60%;
-    --chart-2: 183 100% 74%;
-    --chart-3: 45 100% 60%;
-    --chart-4: 210 100% 60%;
-    --chart-5: 0 0% 80%;
+    --chart-1: 160 74% 45%; /* Green */
+    --chart-2: 210 100% 56%; /* Blue */
+    --chart-3: 160 74% 35%; /* Darker green */
+    --chart-4: 190 90% 60%; /* Light Blue */
+    --chart-5: 220 10% 40%; /* Medium Gray */
 
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 30 100% 60%;
-    --sidebar-primary-foreground: 0 0% 10%;
-    --sidebar-accent: 183 100% 74%;
-    --sidebar-accent-foreground: 195 38% 8%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 183 100% 74%;
+    --sidebar-background: 220 14% 10%; /* Slightly darker than background */
+    --sidebar-foreground: 0 0% 95%; 
+    --sidebar-primary: 160 74% 45%; /* Green */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 100% 56%; /* Blue */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 12% 20%; 
+    --sidebar-ring: 210 100% 56%; /* Blue */
   }
 }
 
