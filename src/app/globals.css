@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 10%; /* Dark Charcoal */
+    --foreground: 0 0% 94.1%; /* Light Gray for text */
+
+    --card: 0 0% 14.1%; /* Slightly Lighter Dark Charcoal */
+    --card-foreground: 0 0% 94.1%;
+
+    --popover: 0 0% 14.1%;
+    --popover-foreground: 0 0% 94.1%;
+
+    --primary: 30 100% 60%; /* Vibrant Orange */
+    --primary-foreground: 0 0% 10%; /* Dark Charcoal for text on orange */
+
+    --secondary: 0 0% 20%; /* Dark Gray for secondary actions */
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 20%; /* Dark Gray for subtle backgrounds */
+    --muted-foreground: 0 0% 62.7%; /* Lighter Gray for muted text */
+
+    --accent: 183 100% 74%; /* Electric Blue */
+    --accent-foreground: 195 38% 8%; /* Dark Blue/Charcoal for text on blue */
+
+    --destructive: 0 100% 66.1%; /* Vivid Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 0 0% 23.9%; /* Medium Dark Gray */
+    --input: 0 0% 23.9%;
+    --ring: 183 100% 74%; /* Electric Blue for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Chart colors (can be adjusted to fit the theme) */
+    --chart-1: 30 100% 60%; /* Orange */
+    --chart-2: 183 100% 74%; /* Blue */
+    --chart-3: 45 100% 60%; /* Yellow/Gold */
+    --chart-4: 210 100% 60%; /* Bright Blue */
+    --chart-5: 0 0% 80%; /* Light Gray */
+    
+    /* Sidebar specific colors - adjust if sidebar is used extensively with different theme */
+    --sidebar-background: 0 0% 8%; /* Even darker charcoal */
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 30 100% 60%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 183 100% 74%;
+    --sidebar-accent-foreground: 195 38% 8%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 183 100% 74%;
+  }
+
+  /* Remove .dark class specific overrides if dark is the only theme */
+  /* Or ensure .dark is applied to html tag and keep these for explicitness */
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 94.1%;
+    --card: 0 0% 14.1%;
+    --card-foreground: 0 0% 94.1%;
+    --popover: 0 0% 14.1%;
+    --popover-foreground: 0 0% 94.1%;
+    --primary: 30 100% 60%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 85%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 62.7%;
+    --accent: 183 100% 74%;
+    --accent-foreground: 195 38% 8%;
+    --destructive: 0 100% 66.1%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 23.9%;
+    --input: 0 0% 23.9%;
+    --ring: 183 100% 74%;
+    
+    --chart-1: 30 100% 60%;
+    --chart-2: 183 100% 74%;
+    --chart-3: 45 100% 60%;
+    --chart-4: 210 100% 60%;
+    --chart-5: 0 0% 80%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 30 100% 60%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 183 100% 74%;
+    --sidebar-accent-foreground: 195 38% 8%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 183 100% 74%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Animations */
+@layer utilities {
+  .animate-slide-in-bottom {
+    animation: slide-in-bottom 0.5s ease-out forwards;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.7s ease-out forwards;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 2s infinite ease-in-out;
+  }
+  .text-glow-accent {
+    text-shadow: 0 0 8px hsl(var(--accent)), 0 0 16px hsl(var(--accent) / 0.7);
+  }
+  .icon-glow-accent {
+    filter: drop-shadow(0 0 3px hsl(var(--accent))) drop-shadow(0 0 6px hsl(var(--accent)/0.6));
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px hsl(var(--accent)), 0 0 10px hsl(var(--accent) / 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px hsl(var(--accent)), 0 0 25px hsl(var(--accent) / 0.7);
+  }
+}
+
+/* Parallax background style */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
