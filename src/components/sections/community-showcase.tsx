@@ -6,20 +6,18 @@ import Link from 'next/link';
 const members: MemberProfile[] = [
   {
     id: '1',
-    name: 'Fatmata K.',
-    role: 'Lead Blockchain Developer',
+    name: 'Favor Chi.',
+    role: 'Lead, SuperteamSL',
     imageUrl: 'https://placehold.co/300x300.png',
-    dataAiHint: 'woman portrait',
-    bio: 'Passionate about building scalable and secure decentralized applications. Core contributor to multiple open-source Web3 projects.',
+    dataAiHint: 'man portrait',
     socials: { twitter: '#', linkedin: '#' },
   },
   {
     id: '2',
-    name: 'Mohamed S.',
-    role: 'Creative Director & NFT Artist',
+    name: 'Dominic OT',
+    role: 'Lead, SuperteamSL Devs',
     imageUrl: 'https://placehold.co/300x300.png',
     dataAiHint: 'man portrait',
-    bio: 'Blending Sierra Leonean art with futuristic digital concepts. Believes in art as a catalyst for change.',
     socials: { twitter: '#', linkedin: '#' },
   },
   {
@@ -28,7 +26,6 @@ const members: MemberProfile[] = [
     role: 'Community Manager & DAO Strategist',
     imageUrl: 'https://placehold.co/300x300.png',
     dataAiHint: 'person smiling',
-    bio: 'Building inclusive and engaged Web3 communities. Expert in DAO governance and decentralized collaboration.',
     socials: { twitter: '#', linkedin: '#' },
   },
 ];

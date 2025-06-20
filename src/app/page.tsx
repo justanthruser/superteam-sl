@@ -1,5 +1,3 @@
-'use client';
-
 import { Navbar } from '@/components/layout/navbar';
 import { Footer } from '@/components/layout/footer';
 import { HeroSection } from '@/components/sections/hero';
@@ -9,70 +7,46 @@ import { ProjectShowcaseSection } from '@/components/sections/project-showcase';
 import { CommunityShowcaseSection } from '@/components/sections/community-showcase';
 import { CreativeCatalystSection } from '@/components/sections/creative-catalyst';
 import { JoinUsSection } from '@/components/sections/join-us';
-import { ScrollReveal, StaggerContainer } from '@/components/ui/animations';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { AnimatedSection } from '@/components/ui/animated-section';
 
 export default function LeoneVersePage() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end']
-  });
-
-  // Example of scroll-linked animation values
-  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.1], [1, 0.95]);
-
   return (
-    <div 
-      ref={containerRef}
-      className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden"
-    >
-      <motion.div 
-        style={{ opacity, scale }}
-        className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 pointer-events-none"
-      />
-      
-      <ScrollReveal>
-        <Navbar />
-      </ScrollReveal>
-      
-      <main className="flex-grow">
-        <StaggerContainer staggerChildren={0.2}>
+    <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+      <Navbar />
+      <main className="flex-grow overflow-hidden">
+        {/* Hero section remains without animations */}
+        <div className="relative z-10">
           <HeroSection />
-          
-          <ScrollReveal delay={0.1}>
+        </div>
+        
+        {/* Animated sections */}
+        <div className="space-y-20 md:space-y-32">
+          <AnimatedSection variant="fadeInUp">
             <AboutSection />
-          </ScrollReveal>
+          </AnimatedSection>
           
-          <ScrollReveal direction="left">
+          <AnimatedSection variant="slideInRight">
             <MapShowcaseSection />
-          </ScrollReveal>
+          </AnimatedSection>
           
-          <ScrollReveal direction="right">
+          <AnimatedSection variant="fadeInUp">
             <ProjectShowcaseSection />
-          </ScrollReveal>
+          </AnimatedSection>
           
-          <ScrollReveal>
+          <AnimatedSection variant="slideInLeft">
             <CommunityShowcaseSection />
-          </ScrollReveal>
+          </AnimatedSection>
           
-          <ScrollReveal>
+          <AnimatedSection variant="fadeInUp">
             <CreativeCatalystSection />
-          </ScrollReveal>
+          </AnimatedSection>
           
-          <ScrollReveal>
+          <AnimatedSection variant="fadeIn">
             <JoinUsSection />
-          </ScrollReveal>
-        </StaggerContainer>
+          </AnimatedSection>
+        </div>
       </main>
-      
-      <ScrollReveal>
-        <Footer />
-      </ScrollReveal>
+      <Footer />
     </div>
   );
 }
-
-
