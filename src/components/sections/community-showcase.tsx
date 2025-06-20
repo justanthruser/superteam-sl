@@ -6,7 +6,7 @@ import Link from 'next/link';
 const members: MemberProfile[] = [
   {
     id: '1',
-    name: 'Favor Chi.',
+    name: 'Favor Chi',
     role: 'Lead, SuperteamSL',
     imageUrl: 'https://placehold.co/300x300.png',
     dataAiHint: 'man portrait',
@@ -14,7 +14,7 @@ const members: MemberProfile[] = [
   },
   {
     id: '2',
-    name: 'Dominic OT',
+    name: 'David Chi',
     role: 'Lead, SuperteamSL Devs',
     imageUrl: 'https://placehold.co/300x300.png',
     dataAiHint: 'man portrait',
